@@ -15,9 +15,11 @@ const sora = Sora({
 })
 
 export const metadata: Metadata = {
-  title: "Buscou, Achou — Simples assim",
+  title: "Buscou, Achou — Tudo da cidade em um só lugar",
   description:
-    "Buscou, achou. Buscou, achou, comprou. Buscou, achou, chegou. O marketplace local que conecta você às lojas da sua cidade.",
+    "A beta pública do Buscou, Achou reúne notícias, farmácia de plantão, eventos, saúde, esportes e comércios da sua cidade em um só lugar.",
+  applicationName: "Buscou, Achou",
+  keywords: ["cidade", "notícias", "farmácia plantão", "eventos", "comércio local", "Ribeirão Branco"],
 }
 
 export const viewport: Viewport = {
