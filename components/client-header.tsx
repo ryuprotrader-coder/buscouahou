@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { MapPin, Search, ChevronDown, Bell } from "lucide-react"
 
 export function ClientHeader() {
@@ -11,12 +10,11 @@ export function ClientHeader() {
         <div className="flex items-center gap-3">
           {/* Brand Logo */}
           <div className="flex items-center">
-            <Image
+            <img
               src="/logo-buscou-achou.jpeg"
               alt="Buscou, Achou — Simples assim"
               width={44}
               height={44}
-              priority
               className="w-11 h-11 rounded-xl object-cover ring-1 ring-navy-100 shadow-sm"
             />
           </div>
