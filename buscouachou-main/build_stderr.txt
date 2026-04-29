@@ -1,0 +1,6 @@
+[31m[1m17:09:08[22m [ERROR] [vite][39m [31mx[39m Build failed in 1.25s
+Could not resolve "../../_helpers" from "src/pages/api/user/planos.ts"
+file: H:/Dev/maismelhor/app/src/pages/api/user/planos.ts
+  [1mStack trace:[22m
+[2m    at getRollupError (file:///h:/Dev/maismelhor/app/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at ModuleLoader.handleInvalidResolvedId (file:///h:/Dev/maismelhor/app/node_modules/rollup/dist/es/shared/node-entry.js:21710:24)[22m

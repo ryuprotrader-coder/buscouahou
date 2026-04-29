@@ -1,0 +1,87 @@
+17:17:13 [types] Generated 179ms
+17:17:13 [build] output: "server"
+17:17:13 [build] directory: H:\Dev\maismelhor\app\dist\
+17:17:13 [build] adapter: @astrojs/node
+17:17:13 [build] Collecting build info...
+17:17:13 [build] ✓ Completed in 382ms.
+17:17:13 [build] Building server entrypoints...
+17:17:14 [WARN] [router] getStaticPaths() ignored in dynamic page /src/pages/client/loja/[slug].astro. Add `export const prerender = true;` to prerender the page as static HTML during the build process.
+"MoreHorizontal", "MessageCircle" and "Filter" are imported from external module "lucide-react" but never used in "src/components/client/OrdersList.tsx", "src/components/dashboard/ProductsPage.tsx" and "src/components/dashboard/OrdersPage.tsx".
+17:17:17 [vite] [32m✓ built in 4.12s[39m
+17:17:17 [build] ✓ Completed in 4.17s.
+
+ building client (vite) 
+17:17:17 [vite] transforming...
+17:17:37 [vite] [32m✓[39m 2846 modules transformed.
+17:17:38 [vite] rendering chunks...
+17:17:40 [vite] computing gzip size...
+17:17:40 [vite] [2mdist/client/[22m[35m_astro/InteractiveMap.C-MTQCnQ.css   [39m[1m[2m   41.01 kB[22m[1m[22m[2m │ gzip:   5.60 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/hoisted.CntqQtg1.js           [39m[1m[2m    0.09 kB[22m[1m[22m[2m │ gzip:   0.11 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/AuthCookieSync.27qNFpJz.js    [39m[1m[2m    0.20 kB[22m[1m[22m[2m │ gzip:   0.18 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/chevron-right.C8EZmqjU.js     [39m[1m[2m    0.31 kB[22m[1m[22m[2m │ gzip:   0.25 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/chevron-left.nuCM07yN.js      [39m[1m[2m    0.31 kB[22m[1m[22m[2m │ gzip:   0.25 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/loader-circle.Df59Mecx.js     [39m[1m[2m    0.32 kB[22m[1m[22m[2m │ gzip:   0.26 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/plus.K28d2FF8.js              [39m[1m[2m    0.33 kB[22m[1m[22m[2m │ gzip:   0.26 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/x.DgTxpe2o.js                 [39m[1m[2m    0.33 kB[22m[1m[22m[2m │ gzip:   0.26 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/search.BFHJ3XYM.js            [39m[1m[2m    0.35 kB[22m[1m[22m[2m │ gzip:   0.27 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/clock.Bt0Hdy64.js             [39m[1m[2m    0.36 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/circle-check-big.ChIVfCL7.js  [39m[1m[2m    0.37 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/user.CovV4nTI.js              [39m[1m[2m    0.38 kB[22m[1m[22m[2m │ gzip:   0.29 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/circle-x.BsPbweH7.js          [39m[1m[2m    0.38 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/bell.nEqY-epP.js              [39m[1m[2m    0.39 kB[22m[1m[22m[2m │ gzip:   0.29 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/star.BZccAL5C.js              [39m[1m[2m    0.39 kB[22m[1m[22m[2m │ gzip:   0.29 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/heart.CiiJUO2p.js             [39m[1m[2m    0.42 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/shopping-bag.laDNRoSc.js      [39m[1m[2m    0.43 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/eye.C-pbCQyN.js               [39m[1m[2m    0.43 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/map-pin.DixJZXCA.js           [39m[1m[2m    0.43 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/zap.B92Nkx99.js               [39m[1m[2m    0.44 kB[22m[1m[22m[2m │ gzip:   0.32 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/image.C8YGvaEL.js             [39m[1m[2m    0.45 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/tag.CQGfqr8V.js               [39m[1m[2m    0.51 kB[22m[1m[22m[2m │ gzip:   0.35 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/share-2.CJWNGyJF.js           [39m[1m[2m    0.53 kB[22m[1m[22m[2m │ gzip:   0.34 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/crown.BZ0-4YtX.js             [39m[1m[2m    0.54 kB[22m[1m[22m[2m │ gzip:   0.36 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/package.CLYKvNUb.js           [39m[1m[2m    0.57 kB[22m[1m[22m[2m │ gzip:   0.36 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/phone.BTuMWm_r.js             [39m[1m[2m    0.57 kB[22m[1m[22m[2m │ gzip:   0.36 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/truck.DaG9-bye.js             [39m[1m[2m    0.58 kB[22m[1m[22m[2m │ gzip:   0.37 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/hoisted.VLVMmsup.js           [39m[1m[2m    0.75 kB[22m[1m[22m[2m │ gzip:   0.50 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/clsx.hLDyYQOM.js              [39m[1m[2m    0.75 kB[22m[1m[22m[2m │ gzip:   0.48 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/variants.DlkymCeR.js          [39m[1m[2m    0.79 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/store.1CNANct7.js             [39m[1m[2m    0.83 kB[22m[1m[22m[2m │ gzip:   0.41 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/settings.B0YmxbKg.js          [39m[1m[2m    1.23 kB[22m[1m[22m[2m │ gzip:   0.54 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/TopBar.DvgC7CmK.js            [39m[1m[2m    1.38 kB[22m[1m[22m[2m │ gzip:   0.69 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/mail.No8BpcKW.js              [39m[1m[2m    1.64 kB[22m[1m[22m[2m │ gzip:   0.61 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/client.CcKoFf03.js            [39m[1m[2m    1.75 kB[22m[1m[22m[2m │ gzip:   0.89 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/ClientBottomNav.CURZvhT3.js   [39m[1m[2m    2.25 kB[22m[1m[22m[2m │ gzip:   1.08 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/createLucideIcon.vn4ydje_.js  [39m[1m[2m    2.42 kB[22m[1m[22m[2m │ gzip:   1.08 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/ClientHeader.C16bP1Mt.js      [39m[1m[2m    2.73 kB[22m[1m[22m[2m │ gzip:   1.17 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/OrdersList.B0kLJhSo.js        [39m[1m[2m    2.90 kB[22m[1m[22m[2m │ gzip:   1.18 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/index.BuluF1Gx.js             [39m[1m[2m    2.99 kB[22m[1m[22m[2m │ gzip:   1.45 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/UserProfile.BdyMHqA1.js       [39m[1m[2m    3.86 kB[22m[1m[22m[2m │ gzip:   1.58 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/LoginForm.BQlbtvCc.js         [39m[1m[2m    5.45 kB[22m[1m[22m[2m │ gzip:   2.03 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/stores.h2kFNKjJ.js            [39m[1m[2m    5.62 kB[22m[1m[22m[2m │ gzip:   1.97 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/PromotionsFeed.BJqbOhnF.js    [39m[1m[2m    6.13 kB[22m[1m[22m[2m │ gzip:   2.09 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/Sidebar.CJxw75mC.js           [39m[1m[2m    6.66 kB[22m[1m[22m[2m │ gzip:   2.26 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/index.DJO9vBfz.js             [39m[1m[2m    6.96 kB[22m[1m[22m[2m │ gzip:   2.78 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/StorePage.BKUIvIwW.js         [39m[1m[2m    7.30 kB[22m[1m[22m[2m │ gzip:   2.21 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/DeliveriesPage.PmGYNn8L.js    [39m[1m[2m    7.65 kB[22m[1m[22m[2m │ gzip:   2.40 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/OrdersPage.iSKkn314.js        [39m[1m[2m    8.02 kB[22m[1m[22m[2m │ gzip:   2.91 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/RegisterForm.B2DKRsKA.js      [39m[1m[2m    8.29 kB[22m[1m[22m[2m │ gzip:   2.69 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/PromotionsPage.C0tPrS0O.js    [39m[1m[2m    9.60 kB[22m[1m[22m[2m │ gzip:   2.81 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/ProductsPage.BK6MaKxr.js      [39m[1m[2m    9.82 kB[22m[1m[22m[2m │ gzip:   3.21 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/StoreDetailPage.D2yT8bmI.js   [39m[1m[2m   10.06 kB[22m[1m[22m[2m │ gzip:   3.07 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/ProfilePage.2Tt_t4w8.js       [39m[1m[2m   12.57 kB[22m[1m[22m[2m │ gzip:   3.85 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/InteractiveMap.CCF7zG16.js    [39m[1m[2m   28.82 kB[22m[1m[22m[2m │ gzip:   9.97 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/MarketplaceHome.BHZoGtFT.js   [39m[1m[2m   37.45 kB[22m[1m[22m[2m │ gzip:  12.12 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/proxy.w1h4EPnn.js             [39m[1m[2m  111.47 kB[22m[1m[22m[2m │ gzip:  36.67 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/index.DDbRfWhw.js             [39m[1m[2m  133.91 kB[22m[1m[22m[2m │ gzip:  43.12 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/auth.CelgX3Vx.js              [39m[1m[2m  176.73 kB[22m[1m[22m[2m │ gzip:  47.11 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/HomeDashboard.BnflaNEP.js     [39m[1m[2m  404.50 kB[22m[1m[22m[2m │ gzip: 110.19 kB[22m
+17:17:40 [vite] [2mdist/client/[22m[36m_astro/mapbox-gl.CbMYop87.js         [39m[1m[33m1,703.05 kB[39m[22m[2m │ gzip: 469.66 kB[22m
+17:17:40 [WARN] [vite] [33m
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+17:17:40 [vite] [32m✓ built in 22.88s[39m
+17:17:40 [build] Rearranging server assets...
+17:17:40 [build] Server built in 27.69s
+17:17:40 [build] Complete!

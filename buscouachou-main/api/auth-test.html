@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auth Test — MaisMelhor API</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #a78bfa;
+      margin-bottom: 0.25rem;
+    }
+    .subtitle {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: #1e2130;
+      border: 1px solid #2d3148;
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+    .card h2 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #c4b5fd;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .method {
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+    .post { background: #1e3a5f; color: #60a5fa; }
+    .get  { background: #1a3a2a; color: #4ade80; }
+
+    label {
+      display: block;
+      font-size: 0.78rem;
+      color: #94a3b8;
+      margin-bottom: 0.35rem;
+    }
+    input {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      background: #0f1117;
+      border: 1px solid #2d3148;
+      border-radius: 8px;
+      color: #e2e8f0;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus { border-color: #7c3aed; }
+
+    button {
+      width: 100%;
+      padding: 0.55rem 1rem;
+      background: #7c3aed;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    button:hover  { background: #6d28d9; }
+    button:active { transform: scale(0.98); }
+
+    .response {
+      margin-top: 0.85rem;
+      background: #0f1117;
+      border: 1px solid #2d3148;
+      border-radius: 8px;
+      padding: 0.75rem;
+      font-size: 0.78rem;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      line-height: 1.5;
+      min-height: 56px;
+      max-height: 220px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+      color: #94a3b8;
+    }
+    .response.ok    { border-color: #166534; color: #4ade80; }
+    .response.error { border-color: #7f1d1d; color: #f87171; }
+
+    #api-url-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    #api-url-row label { margin: 0; white-space: nowrap; }
+    #api-base {
+      flex: 1;
+      margin: 0;
+    }
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #4b5563;
+      flex-shrink: 0;
+      transition: background 0.3s;
+    }
+    .status-dot.online  { background: #4ade80; box-shadow: 0 0 6px #4ade80; }
+    .status-dot.offline { background: #f87171; box-shadow: 0 0 6px #f87171; }
+  </style>
+</head>
+<body>
+
+  <h1>🔐 Auth Test</h1>
+  <p class="subtitle">MaisMelhor API — rotas de autenticação</p>
+
+  <div id="api-url-row">
+    <label for="api-base">API Base URL:</label>
+    <input id="api-base" type="text" value="http://localhost:3001" />
+    <div class="status-dot" id="status-dot" title="Status da API"></div>
+  </div>
+
+  <div class="grid">
+
+    <!-- LOGIN -->
+    <div class="card">
+      <h2><span class="method post">POST</span> /api/auth/login</h2>
+      <label>Email</label>
+      <input id="login-email" type="email" placeholder="usuario@email.com" />
+      <label>Senha</label>
+      <input id="login-password" type="password" placeholder="mínimo 6 caracteres" />
+      <button onclick="doLogin()">Fazer Login</button>
+      <div class="response" id="login-res">aguardando...</div>
+    </div>
+
+    <!-- REGISTRO -->
+    <div class="card">
+      <h2><span class="method post">POST</span> /api/auth/registro</h2>
+      <label>Nome</label>
+      <input id="reg-nome" type="text" placeholder="João" />
+      <label>Sobrenome (opcional)</label>
+      <input id="reg-sobrenome" type="text" placeholder="Silva" />
+      <label>Email</label>
+      <input id="reg-email" type="email" placeholder="novo@email.com" />
+      <label>Senha</label>
+      <input id="reg-password" type="password" placeholder="mínimo 6 caracteres" />
+      <label>Role</label>
+      <input id="reg-role" type="text" placeholder="cliente | lojista" value="cliente" />
+      <button onclick="doRegistro()">Registrar</button>
+      <div class="response" id="reg-res">aguardando...</div>
+    </div>
+
+    <!-- SESSION -->
+    <div class="card">
+      <h2><span class="method get">GET</span> /api/auth/session</h2>
+      <p style="font-size:0.8rem;color:#64748b;margin-bottom:1rem;">Verifica a sessão atual via cookie <code>sb-access-token</code>.</p>
+      <button onclick="doSession()">Verificar Sessão</button>
+      <div class="response" id="session-res">aguardando...</div>
+    </div>
+
+    <!-- LOGOUT -->
+    <div class="card">
+      <h2><span class="method post">POST</span> /api/auth/logout</h2>
+      <p style="font-size:0.8rem;color:#64748b;margin-bottom:1rem;">Encerra a sessão e limpa os cookies de autenticação.</p>
+      <button onclick="doLogout()" style="background:#be123c;">Fazer Logout</button>
+      <div class="response" id="logout-res">aguardando...</div>
+    </div>
+
+    <!-- RESET SENHA -->
+    <div class="card">
+      <h2><span class="method post">POST</span> /api/auth/reset-senha</h2>
+      <label>Email</label>
+      <input id="reset-email" type="email" placeholder="usuario@email.com" />
+      <button onclick="doReset()">Enviar Link de Recuperação</button>
+      <div class="response" id="reset-res">aguardando...</div>
+    </div>
+
+    <!-- NOVA SENHA -->
+    <div class="card">
+      <h2><span class="method post">POST</span> /api/auth/nova-senha</h2>
+      <p style="font-size:0.8rem;color:#64748b;margin-bottom:0.75rem;">
+        Cole a URL completa do link recebido no e-mail.<br>
+        Os tokens são extraídos automaticamente do <code>#hash</code>.
+      </p>
+      <label>URL do e-mail de recuperação</label>
+      <input id="nova-url" type="text" placeholder="http://localhost:3000/#access_token=..." oninput="parseRecoveryUrl()" />
+      <label style="margin-top:0.25rem;">access_token <span id="at-status" style="color:#4ade80;"></span></label>
+      <input id="nova-at" type="text" placeholder="(preenchido automaticamente)" />
+      <label>refresh_token <span id="rt-status" style="color:#4ade80;"></span></label>
+      <input id="nova-rt" type="text" placeholder="(preenchido automaticamente)" />
+      <label>Nova Senha</label>
+      <input id="nova-password" type="password" placeholder="mínimo 6 caracteres" />
+      <button onclick="doNovaSenha()">Redefinir Senha</button>
+      <div class="response" id="nova-res">aguardando...</div>
+    </div>
+
+  </div>
+
+  <script>
+    const base = () => document.getElementById('api-base').value.replace(/\/$/, '');
+
+    function setRes(id, data, isOk) {
+      const el = document.getElementById(id);
+      el.textContent = JSON.stringify(data, null, 2);
+      el.className = 'response ' + (isOk ? 'ok' : 'error');
+    }
+
+    async function call(method, path, body, resId) {
+      const el = document.getElementById(resId);
+      el.className = 'response';
+      el.textContent = '⏳ carregando...';
+      try {
+        const opts = {
+          method,
+          credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+        };
+        if (body) opts.body = JSON.stringify(body);
+        const res = await fetch(base() + path, opts);
+        const json = await res.json();
+        setRes(resId, json, json.ok !== false && res.ok);
+      } catch (e) {
+        setRes(resId, { error: e.message }, false);
+      }
+    }
+
+    function doLogin() {
+      call('POST', '/api/auth/login', {
+        email: document.getElementById('login-email').value,
+        password: document.getElementById('login-password').value,
+      }, 'login-res');
+    }
+
+    function doRegistro() {
+      call('POST', '/api/auth/registro', {
+        nome: document.getElementById('reg-nome').value,
+        sobrenome: document.getElementById('reg-sobrenome').value || undefined,
+        email: document.getElementById('reg-email').value,
+        password: document.getElementById('reg-password').value,
+        role: document.getElementById('reg-role').value,
+      }, 'reg-res');
+    }
+
+    function doSession() {
+      call('GET', '/api/auth/session', null, 'session-res');
+    }
+
+    function doLogout() {
+      call('POST', '/api/auth/logout', null, 'logout-res');
+    }
+
+    function doReset() {
+      call('POST', '/api/auth/reset-senha', {
+        email: document.getElementById('reset-email').value,
+      }, 'reset-res');
+    }
+
+    function parseRecoveryUrl() {
+      const url = document.getElementById('nova-url').value.trim();
+      try {
+        const hash = url.includes('#') ? url.split('#')[1] : url;
+        const params = new URLSearchParams(hash);
+        const at = params.get('access_token') || '';
+        const rt = params.get('refresh_token') || '';
+        document.getElementById('nova-at').value = at;
+        document.getElementById('nova-rt').value = rt;
+        document.getElementById('at-status').textContent = at ? '✓' : '';
+        document.getElementById('rt-status').textContent = rt ? '✓' : '';
+      } catch {}
+    }
+
+    function doNovaSenha() {
+      call('POST', '/api/auth/nova-senha', {
+        access_token: document.getElementById('nova-at').value.trim(),
+        refresh_token: document.getElementById('nova-rt').value.trim(),
+        password: document.getElementById('nova-password').value,
+      }, 'nova-res');
+    }
+
+    // Ping da API
+    async function pingApi() {
+      const dot = document.getElementById('status-dot');
+      try {
+        const res = await fetch(base() + '/api/auth/session', { credentials: 'include' });
+        dot.className = res.ok || res.status === 200 ? 'status-dot online' : 'status-dot offline';
+      } catch {
+        dot.className = 'status-dot offline';
+      }
+    }
+
+    document.getElementById('api-base').addEventListener('change', pingApi);
+    pingApi();
+    setInterval(pingApi, 10000);
+  </script>
+</body>
+</html>

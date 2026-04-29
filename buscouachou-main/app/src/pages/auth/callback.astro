@@ -1,0 +1,94 @@
+---
+/**
+ * Callback OAuth / Magic Link do Supabase.
+ */
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Autenticando... - Mais Melhor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="callback-root">
+      <div class="spinner"></div>
+      <p>Autenticando sua conta...</p>
+    </div>
+
+    <script>
+      import { syncSessionCookie } from "../../lib/auth";
+      import { supabase } from "../../lib/supabase";
+
+      const redirectForSession = (session: any) => {
+        const role = session.user?.user_metadata?.role;
+        window.location.href =
+          role === "lojista" || role === "admin" ? "/dashboard" : "/client";
+      };
+
+      const finishSignIn = async (session: any) => {
+        await syncSessionCookie(session);
+        redirectForSession(session);
+      };
+
+      supabase.auth.onAuthStateChange(async (event, session) => {
+        if ((event === "SIGNED_IN" || event === "TOKEN_REFRESHED") && session) {
+          await finishSignIn(session);
+        } else if (event === "PASSWORD_RECOVERY") {
+          window.location.href = "/auth/nova-senha";
+        }
+      });
+
+      supabase.auth.getSession().then(async ({ data }) => {
+        if (data.session) {
+          await finishSignIn(data.session);
+        }
+      });
+
+      setTimeout(() => {
+        const el = document.getElementById("callback-root");
+        if (el) {
+          el.innerHTML = `
+            <p style="color:#ff6b00">Ocorreu um problema ao autenticar.</p>
+            <a href="/auth/login" style="color:#fff;text-decoration:underline;margin-top:1rem;display:inline-block">Voltar ao login</a>
+          `;
+        }
+      }, 8000);
+    </script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: #0a0a0f;
+        color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100dvh;
+        margin: 0;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255, 107, 0, 0.2);
+        border-top-color: #ff6b00;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </body>
+</html>

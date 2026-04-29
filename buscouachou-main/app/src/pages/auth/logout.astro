@@ -1,0 +1,62 @@
+---
+/**
+ * Logout page.
+ */
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Saindo... - Mais Melhor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="logout-root">
+      <div class="spinner"></div>
+      <p>Encerrando sessao...</p>
+    </div>
+
+    <script>
+      import { signOut } from '../../lib/auth';
+
+      signOut().finally(() => {
+        window.location.href = '/auth/login';
+      });
+    </script>
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #0a0a0f;
+        color: rgba(255,255,255,.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100dvh;
+        margin: 0;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255,107,0,.2);
+        border-top-color: #ff6b00;
+        border-radius: 50%;
+        animation: spin .8s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </body>
+</html>
