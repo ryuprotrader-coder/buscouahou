@@ -51,7 +51,7 @@ export function FeaturedStoresList({ title }: FeaturedStoresListProps) {
   return (
     <section aria-label={title} className="py-4">
       <div className="px-4 mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-display font-bold text-neutral-900 text-balance">{title}</h2>
+        <h2 className="text-lg font-display font-bold text-navy-900 text-balance">{title}</h2>
         <button
           type="button"
           className="text-xs font-semibold text-brand-500 hover:text-brand-600 transition-colors"
@@ -64,10 +64,10 @@ export function FeaturedStoresList({ title }: FeaturedStoresListProps) {
         {FEATURED_STORES.map((store) => (
           <li
             key={store.id}
-            className="flex-shrink-0 snap-start w-64 group bg-white border border-neutral-200/70 shadow-sm rounded-2xl overflow-hidden transition-transform hover:-translate-y-0.5"
+            className="flex-shrink-0 snap-start w-64 group bg-white border border-navy-100 shadow-sm rounded-2xl overflow-hidden transition-transform hover:-translate-y-0.5"
           >
             {/* Store Image */}
-            <div className="relative w-full h-32 overflow-hidden bg-neutral-100">
+            <div className="relative w-full h-32 overflow-hidden bg-navy-50">
               <img
                 src={store.image || "/placeholder.svg"}
                 alt=""
@@ -76,20 +76,20 @@ export function FeaturedStoresList({ title }: FeaturedStoresListProps) {
               />
               <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm rounded-full px-2 py-1 flex items-center gap-1 shadow-sm">
                 <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
-                <span className="text-[10px] font-bold text-neutral-800">{store.rating}</span>
+                <span className="text-[10px] font-bold text-navy-900">{store.rating}</span>
               </div>
             </div>
 
             {/* Store Info */}
             <div className="p-3 flex flex-col">
-              <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-wide mb-1">
+              <span className="text-[10px] text-navy-500 font-bold uppercase tracking-wide mb-1">
                 {store.category}
               </span>
-              <h3 className="font-bold text-sm text-neutral-900 leading-tight mb-2 truncate group-hover:text-brand-500 transition-colors">
+              <h3 className="font-bold text-sm text-navy-900 leading-tight mb-2 truncate group-hover:text-brand-500 transition-colors">
                 {store.name}
               </h3>
 
-              <div className="flex items-center text-xs text-neutral-500 gap-3 mb-3 font-medium">
+              <div className="flex items-center text-xs text-navy-500 gap-3 mb-3 font-medium">
                 <span className="flex items-center gap-1">
                   <MapPin className="w-3 h-3" />
                   <span>{store.distance}</span>
@@ -98,7 +98,7 @@ export function FeaturedStoresList({ title }: FeaturedStoresListProps) {
                 <span>{store.deliveryTime}</span>
               </div>
 
-              <div className="w-full pt-2 border-t border-neutral-100 flex justify-between items-center">
+              <div className="w-full pt-2 border-t border-navy-100 flex justify-between items-center">
                 <span className="text-[10px] font-semibold text-emerald-600">{store.deliveryFee}</span>
                 <button
                   type="button"

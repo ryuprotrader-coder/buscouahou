@@ -31,7 +31,7 @@ export function LocalPromotionsList() {
         <span className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center" aria-hidden="true">
           <Zap className="w-3.5 h-3.5 text-red-500 fill-red-500" />
         </span>
-        <h2 id="promotions-title" className="text-lg font-display font-bold text-neutral-900">
+        <h2 id="promotions-title" className="text-lg font-display font-bold text-navy-900">
           Ofertas da Cidade
         </h2>
       </div>
@@ -54,7 +54,7 @@ export function LocalPromotionsList() {
                 <span className="text-xs font-medium text-white/90 mt-0.5">{promo.description}</span>
               </span>
 
-              <span className="relative z-10 bg-white text-neutral-900 font-bold text-[10px] px-3 py-2 rounded-xl group-hover:bg-neutral-50 transition-colors shadow-sm uppercase tracking-wider">
+              <span className="relative z-10 bg-white text-navy-900 font-bold text-[10px] px-3 py-2 rounded-xl group-hover:bg-navy-50 transition-colors shadow-sm uppercase tracking-wider">
                 Aproveitar
               </span>
             </button>

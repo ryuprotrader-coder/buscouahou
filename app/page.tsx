@@ -8,16 +8,16 @@ import { MapPreview } from "@/components/map-preview"
 
 export default function HomePage() {
   return (
-    <div className="min-h-[100dvh] bg-neutral-200/40 flex justify-center">
+    <div className="min-h-[100dvh] bg-navy-100 flex justify-center">
       {/* Phone-frame container */}
-      <div className="flex flex-col h-[100dvh] w-full max-w-md relative bg-white shadow-2xl xl:border-x xl:border-neutral-200">
+      <div className="flex flex-col h-[100dvh] w-full max-w-md relative bg-white shadow-2xl xl:border-x xl:border-navy-100">
         {/* Sticky header */}
         <div className="absolute top-0 inset-x-0 z-30">
           <ClientHeader />
         </div>
 
         {/* Scrollable content */}
-        <main className="flex-1 overflow-y-auto no-scrollbar relative w-full pt-[140px] pb-[90px] bg-neutral-50">
+        <main className="flex-1 overflow-y-auto no-scrollbar relative w-full pt-[140px] pb-[90px] bg-white">
           <div className="animate-fade-in-up animate-delay-100">
             <HeroRecommendations />
           </div>

@@ -17,7 +17,7 @@ export function ClientBottomNav() {
   return (
     <nav
       aria-label="Navegação principal"
-      className="absolute bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-xl border-t border-neutral-200/70"
+      className="absolute bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-xl border-t border-navy-100"
     >
       <ul className="flex justify-around items-center h-[70px] px-2">
         {TABS.map((tab) => {
@@ -42,7 +42,7 @@ export function ClientBottomNav() {
                   <Icon
                     className={cn(
                       "w-6 h-6 z-10 transition-colors duration-300",
-                      isActive ? "text-brand-500" : "text-neutral-500",
+                      isActive ? "text-brand-500" : "text-navy-400",
                     )}
                     strokeWidth={isActive ? 2.5 : 2}
                   />
@@ -50,7 +50,7 @@ export function ClientBottomNav() {
                 <span
                   className={cn(
                     "text-[10px] font-medium transition-colors duration-300",
-                    isActive ? "text-brand-500" : "text-neutral-500",
+                    isActive ? "text-brand-500" : "text-navy-500",
                   )}
                 >
                   {tab.label}

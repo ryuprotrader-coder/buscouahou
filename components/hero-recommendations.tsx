@@ -9,7 +9,7 @@ const RECOMMENDATIONS = [
     context: "Você pediu pizza na última sexta",
     socialProof: "12 pessoas vendo agora",
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80",
-    overlay: "from-brand-500/90 to-brand-600/90",
+    overlay: "from-navy-800/85 to-brand-600/85",
     iconBg: "bg-white/20",
     Icon: Flame,
     trending: true,
@@ -48,9 +48,13 @@ export function HeroRecommendations() {
       <div className="px-4 mb-4 flex items-end justify-between">
         <div>
           <span className="text-xs font-bold text-brand-500 uppercase tracking-widest mb-1 block">Para você</span>
-          <h2 id="hero-rec-title" className="text-2xl font-display font-black text-neutral-900 leading-none text-balance">
-            Ribeirão Branco
+          <h2
+            id="hero-rec-title"
+            className="text-2xl font-display font-black text-navy-900 leading-none text-balance"
+          >
+            Buscou? <span className="text-brand-500">Achou.</span>
           </h2>
+          <p className="text-xs font-medium text-navy-500 mt-1">Recomendações em Ribeirão Branco</p>
         </div>
       </div>
 

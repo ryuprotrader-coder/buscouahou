@@ -32,7 +32,7 @@ export function CategoryGrid() {
                 >
                   <Icon className="w-6 h-6" />
                 </span>
-                <span className="text-[10px] font-semibold text-neutral-700 text-center tracking-tight">
+                <span className="text-[10px] font-semibold text-navy-800 text-center tracking-tight">
                   {cat.name}
                 </span>
               </button>

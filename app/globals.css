@@ -4,32 +4,46 @@
   --font-sans: var(--font-inter);
   --font-display: var(--font-sora);
 
-  --color-background: #fafaf9;
-  --color-foreground: #141210;
+  --color-background: #f7f8fb;
+  --color-foreground: #0f1a33;
 
-  --color-brand-50: #fff5ec;
-  --color-brand-100: #ffe8d0;
-  --color-brand-200: #ffd0a3;
-  --color-brand-300: #ffb06b;
-  --color-brand-400: #ff8c32;
-  --color-brand-500: #ff6b00;
-  --color-brand-600: #e05a00;
-  --color-brand-700: #b84a00;
-  --color-brand-800: #8f3a00;
-  --color-brand-900: #6b2c00;
+  /* Brand orange — extracted from logo "ACHOU" wordmark and bag handle */
+  --color-brand-50: #fff4ec;
+  --color-brand-100: #ffe1c8;
+  --color-brand-200: #ffc591;
+  --color-brand-300: #ffa55a;
+  --color-brand-400: #ff8a2e;
+  --color-brand-500: #ff6b1a;
+  --color-brand-600: #ec5707;
+  --color-brand-700: #c14503;
+  --color-brand-800: #933504;
+  --color-brand-900: #6b2702;
+
+  /* Navy — extracted from logo bag body and "BUSCOU" wordmark */
+  --color-navy-50: #eef1f7;
+  --color-navy-100: #d6dcec;
+  --color-navy-200: #adb9d4;
+  --color-navy-300: #7d8eb6;
+  --color-navy-400: #51648f;
+  --color-navy-500: #2d4170;
+  --color-navy-600: #1f3160;
+  --color-navy-700: #16244c;
+  --color-navy-800: #0f1a39;
+  --color-navy-900: #0a132a;
+  --color-navy-950: #060c1d;
 
   --color-neutral-0: #ffffff;
-  --color-neutral-50: #fafaf9;
-  --color-neutral-100: #f5f4f2;
-  --color-neutral-200: #eceae7;
-  --color-neutral-300: #d6d3ce;
-  --color-neutral-400: #b0aca5;
-  --color-neutral-500: #8a8580;
-  --color-neutral-600: #605c58;
-  --color-neutral-700: #3d3a37;
-  --color-neutral-800: #252320;
-  --color-neutral-900: #141210;
-  --color-neutral-950: #0a0908;
+  --color-neutral-50: #f7f8fb;
+  --color-neutral-100: #eef1f6;
+  --color-neutral-200: #e2e6ee;
+  --color-neutral-300: #c8cedb;
+  --color-neutral-400: #9aa1b3;
+  --color-neutral-500: #6b7387;
+  --color-neutral-600: #4a5163;
+  --color-neutral-700: #313748;
+  --color-neutral-800: #1c2235;
+  --color-neutral-900: #0f1a33;
+  --color-neutral-950: #060c1d;
 
   --color-success: #22c55e;
   --color-warning: #f59e0b;
@@ -57,7 +71,7 @@
   }
 
   body {
-    background: var(--color-neutral-100);
+    background: var(--color-navy-50);
     color: var(--color-foreground);
     font-family: var(--font-sans), system-ui, sans-serif;
   }

@@ -15,8 +15,9 @@ const sora = Sora({
 })
 
 export const metadata: Metadata = {
-  title: "Início · Mais Melhor",
-  description: "Mais Melhor Marketplace — descubra lojas, serviços e ofertas perto de você",
+  title: "Buscou, Achou — Simples assim",
+  description:
+    "Buscou, achou. Buscou, achou, comprou. Buscou, achou, chegou. O marketplace local que conecta você às lojas da sua cidade.",
 }
 
 export const viewport: Viewport = {
@@ -24,7 +25,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
-  themeColor: "#FF6B00",
+  themeColor: "#0f1a39",
 }
 
 export default function RootLayout({
@@ -33,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${sora.variable}`}>
-      <body className="bg-neutral-100 text-neutral-900 antialiased overflow-x-hidden">{children}</body>
+    <html lang="pt-BR" className={`${inter.variable} ${sora.variable} bg-navy-50`}>
+      <body className="bg-navy-50 text-neutral-900 antialiased overflow-x-hidden">{children}</body>
     </html>
   )
 }
